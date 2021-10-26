@@ -1,9 +1,9 @@
-import { SING_IN, SIGN_OUT } from "../actions/type";
+import { SIGN_IN, SIGN_OUT } from "../actions/type";
 const INITIAL_STATE = { isSignedIn: null };
 
 const authReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
-    case SING_IN:
+    case SIGN_IN:
       return { ...state, isSignedIn: true };
     case SIGN_OUT:
       return { ...state, isSignedIn: false };

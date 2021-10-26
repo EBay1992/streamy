@@ -1,7 +1,7 @@
-import { SIGN_OUT, SING_IN } from "./type.js";
+import { SIGN_OUT, SIGN_IN } from "./type.js";
 
 export const singIn = () => {
-  return { type: SING_IN };
+  return { type: SIGN_IN };
 };
 
 export const signOut = () => {
