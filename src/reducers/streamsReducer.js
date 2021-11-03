@@ -18,10 +18,9 @@ const streamsReducer = (state = {}, action) => {
     case EDIT_STREAM:
       return { ...state, [action.payload.id]: action.payload };
     case DETELE_STREAM:
-      return { ...state, [action.payload.id]: undefined };
-    //   const id = action.payload.id;
-    //   const { id: d, ...rest } = state;
-    //   return rest;
+      //! the next line make a weird bug; because it doesnt delete entirly, it just makes undefined;
+      // return { ...state, [action.payload.id]: undefined };
+      return _.omit(state, action.payload);
 
     default:
       return state;
